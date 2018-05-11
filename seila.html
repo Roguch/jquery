@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <style type="text/css">
+        div h2 {
+            background-color: #fffc1c;
+            margin: 0px;
+            padding-left: 10px ;
+        }
+
+        div p{
+            border: 2px solid #2225ff;
+            margin-top: 0px;
+        }
+        .red{
+            color: red;
+        }
+        .blue{
+            color: #76b74d;
+        }
+       body{
+           text-align: center;
+           margin-left: 20%;
+           margin-right: 20%;
+
+       }
+       img{
+
+       }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#mostrar").hide();
+            //Ao clicar no botão ocultar
+            $("#ocultar").click(function(){
+                //Ocultar a div
+                $("#principal").hide("slow");
+                $("#principal2").hide("slow");
+                $("#principal3").hide("slow");
+                $("#ocultar").hide();
+                $("#mostrar").show();
+
+            });
+
+            //Ao clicar no botão mostrar
+            $("#mostrar").click(function(){
+                //Exibir a div
+                $("#principal").show("slow");
+                $("#principal2").show("slow");
+                $("#principal3").show("slow");
+                $("#mostrar").hide();
+                $("#ocultar").show();
+
+            });
+
+
+
+            $("#alternar").click(function () {
+                $("#principal").toggle(1000);
+                $("#principal2").toggle(1250);
+                $("#principal3").toggle(1500);
+
+
+            });
+
+            //fedes
+            $("#alternarfade").click(function () {
+                $("#principal").fadeToggle(800);
+                $("#principal2").fadeToggle(800);
+                $("#principal3").fadeToggle(800);
+
+            });
+
+            // //Métodos slide
+            $("#mostrarslide").hide();
+            $("#ocultarslide").click(function () {
+                $("#principal").slideUp(1500);
+                $("#principal2").slideUp(1250);
+                $("#principal3").slideUp(1000);
+                $("#ocultarslide").hide();
+                $("#mostrarslide").show();
+
+            });
+            $("#mostrarslide").click(function () {
+                $("#principal").slideDown(1000);
+                $("#principal2").slideDown(1250);
+                $("#principal3").slideDown(1500);
+                $("#mostrarslide").hide();
+                $("#ocultarslide").show();
+
+            });
+
+            $(".accordion h2").click(function () {
+                $(this).parent().find("p").slideToggle(1000)
+
+            });
+
+            $("div h2").dblclick(function () {
+                $(this).addClass('red');
+            });
+
+            $("div h2").hover(function () {
+                $(this).addClass('blue');
+            }, function () {
+                $(this).removeClass('blue');
+            });
+
+        });
+    </script>
+
+    <title>Imp</title>
+</head>
+<body>
+
+<h1>A Menina Submersa</h1>
+<button id="mostrar">Mostra</button>
+<button id="ocultar">ocultar</button>
+<button id="alternar">Alterar</button>
+
+<button id="alternarfade">Alterar Fade</button>
+
+<button id="mostrarslide">deslizar</button>
+<button id="ocultarslide">guardar</button>
+
+
+<p>"1"</p>
+
+<div class="accordion" id="principal">
+<h2>Este título deve ser clicável</h2>
+<p>"2"</p>
+</div>
+
+<div class="accordion" id="principal2">
+    <h2>Este título deve ser clicável 2</h2>
+    <p>"3"</p>
+</div>
+
+<div class="accordion" id="principal3">
+    <h2>Este título deve ser clicável 3</h2>
+    <p>"4"</p>
+</div>
+
+<p>"5</p>
+<div>
+<img src="https://universodmo.files.wordpress.com/2014/11/3907909-0610872910-36365.jpg"/>
+</div>  
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .tabcontrol{
+            width: 100%;
+            overflow: hidden;
+            height: 400px;
+        }
+        .tabcontrol #topo{
+            width: 100%;
+            overflow: hidden;
+            cursor: hand;
+        }
+        .tabcontrol #principal{
+            width: 99%;
+            border: solid 1px;
+            overflow: hidden;
+            height: 99%;
+        }
+        .tabcontrol .abas{
+            display: inline;
+        }
+        .tabcontrol .abas li{
+            float: left;
+            list-style: none;
+        }
+        .aba{
+            width: 100px;
+            height: 30px;
+            border: solid 1px;
+            border-radius: 15px 15px 0 0;
+            text-align:  center;
+            padding-top: 5px;
+            background: #f2f2f2 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabcontrol">
+        <div id="topo">
+            <ul class="abas">
+                <li>
+                    <div class="aba">
+                        <span>Tab1</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="aba">
+                        <span>Tab2</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="aba">
+                        <span>Tab3</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="aba">
+                        <span>Tab4</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="aba">
+                        <span>Tab5</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="principal">
+            <div class="conteudo">
+                Conteudo 1
+            </div>
+            <div class="conteudo">
+                conteudo 2
+            </div>
+            <div class="conteudo">
+                Conteudo 3
+            </div>
+            <div class="conteudo">
+                conteudo 4
+            </div>
+            <div class="conteudo">
+                Conteudo 5
+            </div>
+        </div>
+    </div>
+</body>
+</html>
